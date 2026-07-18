@@ -1,7 +1,7 @@
 # Twiage — Ambient AI Triage for the Emergency Department
 
 **▶ Play with the live demo:** https://claude.ai/code/artifact/e2b985ed-9270-4f1c-a845-f85dd2ebf6da
-**▶ Watch the 90-second demo video:** _[YouTube link coming soon — placeholder]_
+**▶ Watch the 90-second demo video:** https://youtu.be/2yaYkhNP5Ig
 
 ---
 
@@ -74,7 +74,7 @@ Pick **Marcus Bell** → watch the template select itself and fill → **Skip** 
 **Nurse review** → **Accept & Sign** → explore the physician view (Unsigned work,
 Captured, RN note, Sentiment analysis).
 
-**Demo video:** _[YouTube link coming soon — placeholder]_
+**Demo video:** https://youtu.be/2yaYkhNP5Ig
 
 ---
 
