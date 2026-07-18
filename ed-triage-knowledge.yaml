@@ -1,0 +1,153 @@
+# Machine-readable knowledge base: Epic-style ED nurse triage templates
+# Built 2026-07-18 from parallel-cli research (searches + deep-research run
+# trun_542e4fe8f91e42d58c53141d205e6488). Sources: AHRQ/ENA ESI Handbook 5th ed.,
+# ENA/ACEP guidance, Sullivan Group triage question sets, Epic ASAP ED workflow docs.
+
+meta:
+  purpose: >
+    Fields a triage nurse completes in an Epic ASAP-style triage navigator when a
+    patient is called back after ED check-in: chief complaint, vitals, focused HPI,
+    history, screenings, ESI acuity, and protocol-driven interventions.
+  epic_notes:
+    - Real Epic Foundation navigator content is proprietary; these templates are for
+      an Epic analyst to rebuild as navigator sections or SmartPhrases.
+    - Suggested SmartPhrases: .TRIAGECP, .TRIAGEABD, .TRIAGESOB (SmartLists for
+      choice fields, '***' wildcards for free text).
+  esi_version: 5
+
+shared_header:
+  arrival:
+    - datetime
+    - mode: [ambulatory, wheelchair, EMS, police, carried]
+  chief_complaint: patient_own_words
+  vital_signs: [temperature, heart_rate, respiratory_rate, blood_pressure, spo2_with_o2_source, pain_score_0_10, weight_kg]
+  history:
+    - allergies
+    - home_medications
+    - past_medical_surgical_history
+    - pregnancy_status_and_lmp
+    - tobacco_alcohol_drug_use
+  standard_screenings:
+    suicide_risk: Columbia_or_ASQ
+    fall_risk: true
+    abuse_ipv: asked_privately
+    infection_travel: fever_plus_travel_or_exposure
+    sepsis: suspected_infection_plus_2_of [temp_gt_38_or_lt_36, hr_gt_90, rr_gt_20, altered_mentation]
+
+templates:
+  chest_pain:
+    hpi_opqrst:
+      onset: time_and_activity_at_onset  # at rest vs exertion
+      provocation: [exertion, breathing, palpation, position]
+      palliation: [rest, nitroglycerin, antacids, nothing]
+      quality: [pressure, tightness, sharp, stabbing, burning, squeezing]
+      radiation: [none, left_arm, right_arm, jaw, neck, back, epigastrium]
+      severity: now_and_worst_0_10
+      timing: {pattern: [constant, intermittent], duration: free_text, prior_episodes: bool}
+    red_flags:
+      - diaphoresis
+      - nausea_vomiting
+      - dyspnea
+      - palpitations
+      - dizziness_or_syncope
+      - tearing_pain_to_back  # aortic dissection
+      - pleuritic_pain_with_immobility_surgery_or_leg_swelling  # PE
+    risk_factors: [htn, dm, hyperlipidemia, smoking, prior_cad_mi, prior_stent_cabg, family_history_early_cad, cocaine_stimulant_use]
+    triage_interventions:
+      - ecg_within_10_minutes_shown_to_provider
+      - aspirin_162_325mg_po_per_protocol
+      - oxygen_only_if_spo2_below_90_94
+      - cardiac_monitor_and_iv_per_protocol
+    esi_guidance:
+      default: 2  # possible ACS = high-risk, don't-wait
+      level_1: [unresponsive, pulseless, severe_respiratory_distress, hemodynamic_instability]
+      level_3: low_suspicion_stable_reproducible_pain_needing_2plus_resources
+      level_4_5: rare_clearly_minor
+
+  abdominal_pain:
+    hpi_opqrst:
+      onset: {pattern: [sudden, gradual], time: free_text}
+      location: [ruq, luq, rlq, llq, epigastric, periumbilical, diffuse, flank]
+      migration: bool_with_origin  # e.g. periumbilical to RLQ
+      provocation: [eating, movement, palpation]
+      palliation: [position, vomiting, antacids, nothing]
+      quality: [crampy, sharp, dull, burning, tearing, pressure]
+      radiation: [none, back, groin, shoulder, chest]
+      severity: now_and_worst_0_10
+      timing: {pattern: [constant, colicky_intermittent], duration: free_text}
+    associated_symptoms:
+      gi: [nausea, vomiting_bilious_or_bloody, hematemesis, diarrhea, constipation, last_bm, melena_or_bloody_stool, distension]
+      gu_gyn: [dysuria, hematuria, vaginal_bleeding_or_discharge, lmp_pregnancy_possible]
+      systemic: [fever_chills, anorexia, jaundice, weight_loss, syncope_lightheadedness]
+    red_flags:
+      - sudden_worst_ever_or_tearing_pain
+      - rigid_abdomen
+      - gi_bleeding
+      - syncope_plus_abd_back_pain_age_over_50  # AAA
+      - pain_out_of_proportion  # mesenteric ischemia
+      - possible_ectopic_pregnancy
+      - anticoagulant_use
+    extra_fields: [last_oral_intake_npo_time, last_bowel_movement, prior_abdominal_surgeries]
+    triage_interventions:
+      - poc_pregnancy_test_childbearing_age_females
+      - urinalysis_per_protocol
+      - npo_pending_evaluation
+      - antiemetic_per_protocol
+      - poc_glucose_if_diabetic
+    esi_guidance:
+      default: 3  # labs + imaging = >=2 resources
+      level_1: [shock, unresponsive, massive_gi_bleed_unstable]
+      level_2: [suspected_ectopic, suspected_aaa, mesenteric_ischemia, rigid_abdomen, significant_gi_bleed, severe_pain_with_concerning_features, persistent_hr_over_100]
+      level_4_5: mild_chronic_stable_minimal_workup
+
+  shortness_of_breath:
+    hpi:
+      onset: {pattern: [sudden, gradual], context: [at_rest, on_exertion]}
+      provocation: [exertion, lying_flat_orthopnea_pillow_count, allergen_exposure]
+      palliation: [rest, home_inhaler, sitting_upright, nothing]
+      severity_functional: speech_in [full_sentences, phrases, single_words]
+      timing: {pattern: [constant, episodic], pnd: bool, prior_episodes: bool}
+    red_flags:
+      - home_oxygen_use_with_baseline_liters
+      - hemoptysis
+      - unilateral_leg_swelling_or_recent_immobility_surgery_travel  # PE
+      - fever_or_productive_cough
+      - accessory_muscle_use_retractions_tripoding
+      - cyanosis
+      - chest_pain_or_palpitations
+    relevant_history: [asthma, copd, chf, prior_pe_dvt, cancer, recent_uri_or_covid_exposure, smoking_status, inhalers_used_today]
+    objective_observations:
+      work_of_breathing: [normal, accessory_muscles, retractions, tripoding]
+      breath_sounds: [clear, wheezes, crackles, diminished]
+      able_to_lie_flat: bool
+    triage_interventions:
+      - spo2_room_air_then_o2_to_keep_92_94  # 88-92 if COPD
+      - immediate_rooming_if_severe_distress
+      - nebulized_albuterol_per_asthma_copd_protocol
+      - ecg_and_monitor_if_cardiac_suspected
+      - mask_isolation_if_infectious_symptoms
+    esi_guidance:
+      default: 2  # most acute dyspnea; ESI handbook classic case: smoker RR 32 = level 2
+      level_1: [severe_respiratory_distress, spo2_below_90_with_distress, apnea_or_needs_intubation, one_word_speech]
+      level_3: mild_stable_full_sentences_normal_spo2_2plus_resources
+      level_4_5: minimal_symptoms_normal_vitals
+
+# Required screening questions asked of EVERY ED patient at triage (per clinician
+# partner, 2026-07-18): regulatory/Joint-Commission-style universal screens. Some
+# communities add local questions; these are the most common core set.
+required_screening_questions:
+  - id: safety_at_home
+    ask: "Do you feel safe at home?"  # IPV screen, asked privately
+  - id: suicide_risk
+    ask: Columbia/ASQ brief suicide screen
+  - id: hiv_screening_offer
+    ask: "We offer HIV screening to everyone — would you like to be tested today?"  # opt-out model
+  - id: substance_use
+    ask: brief alcohol/substance screen (SBIRT-style)
+  note: communities may add local screens (e.g., TB risk, hepatitis B, social needs/PRAPARE)
+
+esi_v5_decision_points:
+  a_level_1: requires_immediate_lifesaving_intervention
+  b_level_2: [high_risk_situation, new_confusion_lethargy_disorientation, severe_pain_or_distress]
+  c_resources: {level_3: two_or_more, level_4: one, level_5: none}
+  d_vital_sign_uptriage: consider_uptriage_3_to_2_if_danger_zone_vitals

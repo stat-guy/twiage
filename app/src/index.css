@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cursor-derived palette: warm black ground, cream ink, jewel agent accents */
+  --color-ground: #14120b;
+  --color-panel: #1c1a12;
+  --color-panel-2: #26251e;
+  --color-ink: #f7f7f4;
+  --color-ink-dim: #b6b2a2;
+  --color-ink-faint: #7d7a6c;
+  --color-line: #35332a;
+  --color-accent: #34785c;
+  --color-accent-bright: #4a9d77;
+
+  --color-scribe: #83d6c5;
+  --color-vitals: #ebc88d;
+  --color-esi: #9e94d5;
+  --color-routing: #e394dc;
+  --color-alert: #db704b;
+
+  --color-esi1: #e5484d;
+  --color-esi2: #db704b;
+  --color-esi3: #f8c762;
+  --color-esi4: #82d2ce;
+  --color-esi5: #8f9d94;
+
+  --font-sans: "Helvetica Neue", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+}
+
+html,
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 45%, transparent);
+}
+
+/* thin warm scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+@keyframes field-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+    background: color-mix(in oklab, var(--color-accent) 22%, transparent);
+  }
+  60% {
+    background: color-mix(in oklab, var(--color-accent) 14%, transparent);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    background: transparent;
+  }
+}
+
+.field-in {
+  animation: field-in 900ms ease-out both;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes utter-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.utter-in {
+  animation: utter-in 420ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field-in,
+  .utter-in,
+  .pulse-dot {
+    animation: none;
+  }
+}
+
+/* ---- Epic-style light EHR window (deliberate two-world design: dark ambient
+   shell around a light clinical window) ---- */
+.epic {
+  --ep-chrome: #dfe5ec;
+  --ep-chrome-2: #cdd6e0;
+  --ep-canvas: #ffffff;
+  --ep-ink: #1d2733;
+  --ep-muted: #5c6b7c;
+  --ep-blue: #2456a8;
+  --ep-border: #b6bfca;
+  --ep-band-green: #1c7c46;
+  --ep-band-yellow: #a06e0a;
+  --ep-band-red: #c92c2c;
+  --ep-accept: #3d8544;
+  --ep-bpa: #fff7dc;
+  --ep-bpa-border: #d8b74a;
+  color: var(--ep-ink);
+  color-scheme: light;
+}
+
+@keyframes ep-fill {
+  from {
+    background: #d9e8c9;
+  }
+  to {
+    background: #ffffff;
+  }
+}
+.ep-fill {
+  animation: ep-fill 1.4s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ep-fill {
+    animation: none;
+  }
+}

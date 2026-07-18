@@ -1,0 +1,1468 @@
+{
+ "id": "9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629::9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14",
+ "metadata": {
+  "source": "synthetic-ambient-triage-v2",
+  "synthetic": true,
+  "patient_id": "9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629",
+  "encounter_id": "9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14",
+  "encounter_reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14",
+  "date": "2026-07-18T14:42:00-04:00",
+  "status": "in-progress",
+  "visit_type": "Emergency room admission (procedure)",
+  "document_status": "preliminary",
+  "related_resource_counts": {
+   "Condition": 1,
+   "Observation": 9,
+   "Procedure": 1,
+   "DiagnosticReport": 1,
+   "MedicationRequest": 1
+  },
+  "visit_title": "ED triage — exertional chest pressure with radiation, possible ACS"
+ },
+ "patient_context": {
+  "patient": {
+   "resourceType": "Patient",
+   "id": "9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629",
+   "name": [
+    {
+     "use": "official",
+     "family": "Bell",
+     "given": [
+      "Marcus"
+     ],
+     "prefix": [
+      "Mr."
+     ]
+    }
+   ],
+   "gender": "male",
+   "birthDate": "1972-03-11",
+   "maritalStatus": {
+    "coding": [
+     {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code": "D",
+      "display": "Divorced"
+     }
+    ],
+    "text": "Divorced"
+   },
+   "address": [
+    {
+     "city": "Chelsea",
+     "state": "MA",
+     "country": "US"
+    }
+   ],
+   "communication": [
+    {
+     "language": {
+      "coding": [
+       {
+        "system": "urn:ietf:bcp:47",
+        "code": "en-US",
+        "display": "English (United States)"
+       }
+      ],
+      "text": "English (United States)"
+     }
+    }
+   ]
+  },
+  "longitudinal_summary": {
+   "resource_counts": {
+    "Condition": 6,
+    "DiagnosticReport": 4,
+    "DocumentReference": 3,
+    "Encounter": 5,
+    "Immunization": 3,
+    "MedicationRequest": 4,
+    "Observation": 38,
+    "Patient": 1,
+    "Procedure": 7
+   },
+   "condition_labels": [
+    "Essential hypertension (disorder)",
+    "Hyperlipidemia (disorder)",
+    "Cigarette smoker (finding)",
+    "Unemployed (finding)",
+    "Homeless (finding)"
+   ],
+   "medication_labels": [
+    "lisinopril 20 MG Oral Tablet",
+    "atorvastatin 40 MG Oral Tablet"
+   ]
+  }
+ },
+ "encounter_fhir": {
+  "encounter": {
+   "resourceType": "Encounter",
+   "id": "9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14",
+   "meta": {
+    "profile": [
+     "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+    ]
+   },
+   "identifier": [
+    {
+     "use": "official",
+     "system": "https://twiage.example/synthetic-ambient-triage",
+     "value": "9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+    }
+   ],
+   "status": "in-progress",
+   "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "EMER"
+   },
+   "type": [
+    {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "50849002",
+       "display": "Emergency room admission (procedure)"
+      }
+     ],
+     "text": "Emergency room admission (procedure)"
+    }
+   ],
+   "subject": {
+    "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629",
+    "display": "Mr. Marcus Bell"
+   },
+   "participant": [
+    {
+     "type": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+         "code": "PART",
+         "display": "Participation"
+        }
+       ],
+       "text": "Triage nurse"
+      }
+     ],
+     "period": {
+      "start": "2026-07-18T14:42:00-04:00"
+     },
+     "individual": {
+      "display": "Dana Whitfield, RN — ED Triage"
+     }
+    }
+   ],
+   "period": {
+    "start": "2026-07-18T14:42:00-04:00"
+   },
+   "location": [
+    {
+     "location": {
+      "display": "Riverside Regional Emergency Department — Triage Room 2"
+     }
+    }
+   ],
+   "serviceProvider": {
+    "display": "Riverside Regional Emergency Department"
+   }
+  },
+  "related_resources": {
+   "Condition": [
+    {
+     "resourceType": "Condition",
+     "id": "9d41c2b7-6a8e-4f3d-0c01-1a2f3c4d5e10",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+      ]
+     },
+     "clinicalStatus": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+       }
+      ]
+     },
+     "verificationStatus": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "provisional"
+       }
+      ]
+     },
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+         "code": "encounter-diagnosis",
+         "display": "Encounter Diagnosis"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "29857009",
+        "display": "Chest pain (finding)"
+       }
+      ],
+      "text": "Chest pain (finding) — concern for acute coronary syndrome"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "onsetDateTime": "2026-07-18T13:40:00-04:00",
+     "recordedDate": "2026-07-18T14:42:00-04:00"
+    }
+   ],
+   "Observation": [
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b01-1a2f3c4d5e01",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "8867-4",
+        "display": "Heart rate"
+       }
+      ],
+      "text": "Heart rate"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueQuantity": {
+      "value": 96,
+      "unit": "/min",
+      "system": "http://unitsofmeasure.org",
+      "code": "/min"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b02-1a2f3c4d5e02",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "9279-1",
+        "display": "Respiratory rate"
+       }
+      ],
+      "text": "Respiratory rate"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueQuantity": {
+      "value": 18,
+      "unit": "/min",
+      "system": "http://unitsofmeasure.org",
+      "code": "/min"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b03-1a2f3c4d5e03",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "85354-9",
+        "display": "Blood pressure panel with all children optional"
+       }
+      ],
+      "text": "Blood pressure panel with all children optional"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "component": [
+      {
+       "code": {
+        "coding": [
+         {
+          "system": "http://loinc.org",
+          "code": "8480-6",
+          "display": "Systolic Blood Pressure"
+         }
+        ],
+        "text": "Systolic Blood Pressure"
+       },
+       "valueQuantity": {
+        "value": 158,
+        "unit": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+       }
+      },
+      {
+       "code": {
+        "coding": [
+         {
+          "system": "http://loinc.org",
+          "code": "8462-4",
+          "display": "Diastolic Blood Pressure"
+         }
+        ],
+        "text": "Diastolic Blood Pressure"
+       },
+       "valueQuantity": {
+        "value": 94,
+        "unit": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+       }
+      }
+     ]
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b04-1a2f3c4d5e04",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "2708-6",
+        "display": "Oxygen saturation in Arterial blood"
+       }
+      ],
+      "text": "Oxygen saturation in Arterial blood"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueQuantity": {
+      "value": 97,
+      "unit": "%",
+      "system": "http://unitsofmeasure.org",
+      "code": "%"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b05-1a2f3c4d5e05",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "8310-5",
+        "display": "Body temperature"
+       }
+      ],
+      "text": "Body temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueQuantity": {
+      "value": 36.8,
+      "unit": "Cel",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b06-1a2f3c4d5e06",
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "72514-3",
+        "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+       }
+      ],
+      "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueQuantity": {
+      "value": 6,
+      "unit": "{score}",
+      "system": "http://unitsofmeasure.org",
+      "code": "{score}"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b07-1a2f3c4d5e07",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body Weight"
+       }
+      ],
+      "text": "Body Weight"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueQuantity": {
+      "value": 92,
+      "unit": "kg",
+      "system": "http://unitsofmeasure.org",
+      "code": "kg"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b08-1a2f3c4d5e08",
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "procedure",
+         "display": "Procedure"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "8601-7",
+        "display": "EKG impression"
+       }
+      ],
+      "text": "EKG impression"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:50:00-04:00",
+     "issued": "2026-07-18T14:50:00-04:00",
+     "valueString": "Normal sinus rhythm at 96 bpm with nonspecific ST-T wave changes. No ST-segment elevation. No acute STEMI pattern. Shown to ED physician; pending physician over-read."
+    },
+    {
+     "resourceType": "Observation",
+     "id": "9d41c2b7-6a8e-4f3d-0b09-1a2f3c4d5e09",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "social-history",
+         "display": "Social history"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "72166-2",
+        "display": "Tobacco smoking status"
+       }
+      ],
+      "text": "Tobacco smoking status"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:46:00-04:00",
+     "issued": "2026-07-18T14:46:00-04:00",
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "449868002",
+        "display": "Smokes tobacco daily (finding)"
+       }
+      ],
+      "text": "Smokes tobacco daily (finding)"
+     }
+    }
+   ],
+   "Procedure": [
+    {
+     "resourceType": "Procedure",
+     "id": "9d41c2b7-6a8e-4f3d-0d01-1a2f3c4d5e20",
+     "status": "completed",
+     "code": {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "29303009",
+        "display": "Electrocardiographic procedure (procedure)"
+       }
+      ],
+      "text": "12-lead electrocardiogram at triage"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "performedDateTime": "2026-07-18T14:50:00-04:00"
+    }
+   ],
+   "DiagnosticReport": [
+    {
+     "resourceType": "DiagnosticReport",
+     "id": "9d41c2b7-6a8e-4f3d-0e01-1a2f3c4d5e30",
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+         "code": "CG",
+         "display": "Cardiology"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "11524-6",
+        "display": "EKG study"
+       }
+      ],
+      "text": "EKG study"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "effectiveDateTime": "2026-07-18T14:50:00-04:00",
+     "issued": "2026-07-18T14:51:00-04:00",
+     "result": [
+      {
+       "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-0b08-1a2f3c4d5e08",
+       "display": "EKG impression"
+      }
+     ],
+     "conclusion": "12-lead ECG obtained 8 minutes after ED arrival: normal sinus rhythm with nonspecific ST-T wave changes; no ST-segment elevation; no acute STEMI pattern. Preliminary triage read shown to ED physician; formal over-read pending. Repeat ECG recommended."
+    }
+   ],
+   "MedicationRequest": [
+    {
+     "resourceType": "MedicationRequest",
+     "id": "9d41c2b7-6a8e-4f3d-0f01-1a2f3c4d5e40",
+     "status": "completed",
+     "intent": "order",
+     "medicationCodeableConcept": {
+      "coding": [
+       {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1191",
+        "display": "aspirin"
+       }
+      ],
+      "text": "Aspirin 324 mg (four 81 mg chewable tablets)"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-b5c2-71e0a8d4f629"
+     },
+     "encounter": {
+      "reference": "urn:uuid:9d41c2b7-6a8e-4f3d-a1e7-3c5b9f2d8e14"
+     },
+     "authoredOn": "2026-07-18T14:49:00-04:00",
+     "requester": {
+      "display": "ED chest pain standing protocol — triage RN D. Whitfield"
+     },
+     "dosageInstruction": [
+      {
+       "text": "324 mg PO chewed once now per ED chest pain protocol; administered and tolerated at 14:49."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "transcript": "NURSE: Marcus Bell, date of birth March 11, 1972 — do I have that right?\nPT: That's me.\nNURSE: What's the main problem today?\nPT: Chest pressure, right in the middle. Heavy, like somebody's standing on it. It was going down my left arm and up into my jaw on the bus ride over.\nNURSE: When did it start?\nPT: About an hour ago, lifting boxes at a day-labor site in Everett. Tell you the truth, I sat there a good while doing the math on what this visit would cost before I came in — I lost my insurance when the warehouse laid me off.\nNURSE: Okay. How bad is it right now, zero to ten?\nPT: A six. It was a seven while I was still carrying. I sweated clean through my shirt out there, too.\nNURSE: Mm-hm. Is it still going to the arm or the jaw right now?\nPT: The arm, a little. And I'll be honest — I've been getting little versions of this for a few weeks now. Tightness when I push a cart uphill, quits when I stop. Never got it looked at. No coverage.\nNURSE: Okay. Cuff's going on this arm — hold still for me. Any allergies to medications?\nPT: No allergies. Aspirin's fine too, if that matters — I take it for headaches sometimes.\nNURSE: Any medications at home?\nPT: Lisinopril 20 and atorvastatin 40 — supposed to be, anyway. I ran out of the lisinopril two weeks back. The refill was forty-something dollars without the card, and I didn't have it.\nNURSE: Okay. Do you smoke?\nPT: Pack a day. Thirty years, give or take.\nNURSE: Blood pressure 158 over 94. Heart rate 96, breathing 18, oxygen 97 percent on room air, temp 36.8. Scale puts you at 92 kilos.\nPT: The pressure's always up when they check it. Doesn't help that I'm between places right now — I've been staying at Harbor Light, the shelter here in Chelsea, about three months, since the eviction. It's decent. Just loud.\nNURSE: Mm-hm. Any shortness of breath sitting there? Any vomiting?\nPT: No to both. Breathing's fine, and I haven't thrown up — stomach's turning a little is all.\nNURSE: Quick yes-or-nos I ask everybody. Do you feel safe where you're staying?\nPT: Yeah, I feel safe there. My sister's in Lynn — she'd want a call if anybody's calling. And there's a case worker at the shelter, Denise, who helps me out.\nNURSE: Okay. Any thoughts of hurting yourself or ending your life?\nPT: No. It's been a hard year, but nothing like that.\nNURSE: And we offer an HIV test to everyone in the ED — want it added to today's blood work?\nPT: Sure, if it's the same needle, go ahead.\nNURSE: Done. Chew these four baby aspirin for me — 324 milligrams, standard for chest pain — and shirt up, EKG stickers going on.\nPT: Not the best candy I've ever had. Okay, done.\nNURSE: EKG's printed — normal rhythm, some minor nonspecific changes, no sign of a big active heart attack, and it's already gone to the doctor for an over-read. You're not going back to the waiting room, Marcus — straight to a cardiac room on a monitor, and the doctor will see you inside ten minutes.\nPT: Straight back. Okay. Thank you.",
+ "note": "**Subjective:** 54M with HTN and HLD presenting with mid-sternal chest pressure x1 hour, onset while lifting boxes at work, radiating to left arm and jaw, 6/10 at triage. Current smoker ~1 pack/day. Reports lisinopril 20 mg out x2 weeks; also prescribed atorvastatin 40 mg. NKDA. Safety and suicide screens negative; universal HIV screening offered and accepted.\n\n**Objective:** BP 158/94 mmHg, HR 96, RR 18, SpO2 97% on room air, T 36.8 °C, weight 92 kg, pain 6/10. Alert, speaking in full sentences, no visible distress. 12-lead ECG completed 14:50 (~8 min from arrival): normal sinus rhythm, nonspecific ST-T changes, no ST elevation — sent to ED physician for over-read. Aspirin 324 mg PO chewed at 14:49 per chest pain standing protocol, tolerated.\n\n**Assessment and Plan:** High-risk chest pain — possible ACS. ESI 2 (decision point B). Roomed directly to the acute cardiac zone, monitored bed A-4, continuous telemetry. Physician evaluation targeted within 10 minutes; anticipate IV access, serial troponin, and repeat ECG.",
+ "after_visit_summary": "Visit summary\n\nWhat we discussed\n• Chest pressure that started while you were lifting at work, spreading to your left arm and jaw\n• We are treating this as a possible heart problem until it is ruled out\n• Your first EKG did not show a major active heart attack, but one EKG cannot rule everything out\n• Your blood pressure medicine ran out two weeks ago — there is help for getting it affordably\n• You accepted the HIV test we offer everyone; it uses the same blood draw as your heart tests\n\nNext steps\n• You are going straight to a cardiac room on a heart monitor; the doctor will see you within about 10 minutes\n• You were given aspirin (324 mg, chewed) to protect your heart\n• Blood will be drawn to check a heart enzyme called troponin — this test is repeated more than once\n• Your EKG will be repeated to watch for changes\n• A social worker will visit your bedside to start MassHealth enrollment and help you get your medicines\n• Tell the staff right away if the pressure gets worse or you feel short of breath, sweaty, or faint",
+ "after_visit_summary_provenance": {
+  "method": "deterministic_extractive_v1",
+  "source": "clinical_note_assessment_and_plan",
+  "review_status": "not_clinically_reviewed"
+ },
+ "triage": {
+  "chief_complaint": "Heavy pressure right in the middle of my chest, like somebody's standing on it, going down my left arm and up into my jaw.",
+  "form": {
+   "sections": [
+    {
+     "id": "arrival",
+     "title": "Arrival & Identification"
+    },
+    {
+     "id": "vitals",
+     "title": "Vital Signs & Triage Interventions"
+    },
+    {
+     "id": "hpi",
+     "title": "History of Present Illness (OPQRST)"
+    },
+    {
+     "id": "red_flags",
+     "title": "Chest Pain Red Flags"
+    },
+    {
+     "id": "history",
+     "title": "History, Medications & Allergies"
+    },
+    {
+     "id": "screenings",
+     "title": "Standard Screenings"
+    },
+    {
+     "id": "social",
+     "title": "Social Drivers of Health"
+    }
+   ],
+   "fields": [
+    {
+     "id": "patient_identity",
+     "section": "arrival",
+     "label": "Patient Identity (Confirmed)",
+     "value": "Marcus Bell, DOB 1972-03-11 (54 y) — confirmed verbally at triage",
+     "source_type": "transcript",
+     "utterance_indices": [
+      0,
+      1
+     ],
+     "fires_after_utterance": 1,
+     "agent": "scribe",
+     "confidence": 0.97,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "arrival_mode",
+     "section": "arrival",
+     "label": "Mode of Arrival",
+     "value": "Ambulatory — arrived by public bus, apparently unaccompanied (passing mention only)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      3
+     ],
+     "fires_after_utterance": 3,
+     "agent": "scribe",
+     "confidence": 0.66,
+     "requires_verification": true,
+     "nurse_documented": false
+    },
+    {
+     "id": "heart_rate",
+     "section": "vitals",
+     "label": "Heart Rate",
+     "value": "96",
+     "unit": "bpm",
+     "source_type": "device",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "vitals",
+     "confidence": 0.99,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "blood_pressure",
+     "section": "vitals",
+     "label": "Blood Pressure",
+     "value": "158/94",
+     "unit": "mmHg",
+     "source_type": "device",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "vitals",
+     "confidence": 0.99,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "respiratory_rate",
+     "section": "vitals",
+     "label": "Respiratory Rate",
+     "value": "18",
+     "unit": "breaths/min",
+     "source_type": "device",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "vitals",
+     "confidence": 0.98,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "spo2",
+     "section": "vitals",
+     "label": "SpO2 / O2 Source",
+     "value": "97% on room air",
+     "source_type": "device",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "vitals",
+     "confidence": 0.99,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "temperature",
+     "section": "vitals",
+     "label": "Temperature",
+     "value": "36.8",
+     "unit": "°C",
+     "source_type": "device",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "vitals",
+     "confidence": 0.98,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "weight",
+     "section": "vitals",
+     "label": "Weight",
+     "value": "92",
+     "unit": "kg",
+     "source_type": "device",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "vitals",
+     "confidence": 0.97,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "pain_score",
+     "section": "vitals",
+     "label": "Pain Score (0-10)",
+     "value": "6/10",
+     "source_type": "transcript",
+     "utterance_indices": [
+      6,
+      7
+     ],
+     "fires_after_utterance": 7,
+     "agent": "vitals",
+     "confidence": 0.96,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "bp_measurement_context",
+     "section": "vitals",
+     "label": "BP Context (Patient-Reported)",
+     "value": "Reports BP is 'always up' when checked — chronically elevated readings suggested; interpret with 2-week lisinopril lapse",
+     "source_type": "transcript",
+     "utterance_indices": [
+      16,
+      17
+     ],
+     "fires_after_utterance": 17,
+     "agent": "scribe",
+     "confidence": 0.71,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "chief_complaint",
+     "section": "hpi",
+     "label": "Chief Complaint (Patient's Own Words)",
+     "value": "\"Chest pressure, right in the middle. Heavy, like somebody's standing on it... going down my left arm and up into my jaw.\"",
+     "source_type": "transcript",
+     "utterance_indices": [
+      2,
+      3
+     ],
+     "fires_after_utterance": 3,
+     "agent": "scribe",
+     "confidence": 0.96,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "onset",
+     "section": "hpi",
+     "label": "Onset",
+     "value": "~1 hour prior to arrival, while lifting boxes at a day-labor site (exertional onset)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      4,
+      5
+     ],
+     "fires_after_utterance": 5,
+     "agent": "scribe",
+     "confidence": 0.94,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "radiation",
+     "section": "hpi",
+     "label": "Radiation",
+     "value": "Left arm and jaw at onset; left arm persisting at triage",
+     "source_type": "transcript",
+     "utterance_indices": [
+      3,
+      8,
+      9
+     ],
+     "fires_after_utterance": 9,
+     "agent": "scribe",
+     "confidence": 0.92,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "severity_worst",
+     "section": "hpi",
+     "label": "Severity — Worst (Volunteered)",
+     "value": "7/10 while still carrying boxes",
+     "source_type": "transcript",
+     "utterance_indices": [
+      6,
+      7
+     ],
+     "fires_after_utterance": 7,
+     "agent": "scribe",
+     "confidence": 0.85,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "prior_episodes",
+     "section": "hpi",
+     "label": "Prior Episodes (Volunteered)",
+     "value": "Milder exertional tightness episodes over past few weeks (pushing cart uphill), resolve with stopping; never medically evaluated",
+     "source_type": "transcript",
+     "utterance_indices": [
+      9
+     ],
+     "fires_after_utterance": 9,
+     "agent": "scribe",
+     "confidence": 0.78,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "diaphoresis",
+     "section": "red_flags",
+     "label": "Diaphoresis",
+     "value": "Reported — sweated through shirt during episode (volunteered; not directly assessed at triage)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      7
+     ],
+     "fires_after_utterance": 7,
+     "agent": "scribe",
+     "confidence": 0.87,
+     "requires_verification": true,
+     "nurse_documented": false
+    },
+    {
+     "id": "dyspnea",
+     "section": "red_flags",
+     "label": "Dyspnea",
+     "value": "Denies shortness of breath at rest; speaking in full sentences",
+     "source_type": "transcript",
+     "utterance_indices": [
+      18,
+      19
+     ],
+     "fires_after_utterance": 19,
+     "agent": "scribe",
+     "confidence": 0.9,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "nausea_vomiting",
+     "section": "red_flags",
+     "label": "Nausea / Vomiting",
+     "value": "Denies vomiting; mild nausea volunteered (\"stomach's turning a little\")",
+     "source_type": "transcript",
+     "utterance_indices": [
+      18,
+      19
+     ],
+     "fires_after_utterance": 19,
+     "agent": "scribe",
+     "confidence": 0.86,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "allergies",
+     "section": "history",
+     "label": "Allergies",
+     "value": "No known drug allergies (NKDA)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      10,
+      11
+     ],
+     "fires_after_utterance": 11,
+     "agent": "scribe",
+     "confidence": 0.94,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "home_medications",
+     "section": "history",
+     "label": "Home Medications",
+     "value": "Lisinopril 20 mg daily and atorvastatin 40 mg nightly — lisinopril out x2 weeks",
+     "source_type": "transcript",
+     "utterance_indices": [
+      12,
+      13
+     ],
+     "fires_after_utterance": 13,
+     "agent": "scribe",
+     "confidence": 0.66,
+     "requires_verification": true,
+     "nurse_documented": true
+    },
+    {
+     "id": "tobacco_use",
+     "section": "history",
+     "label": "Tobacco Use",
+     "value": "Current smoker, ~1 pack/day x ~30 years (~30 pack-years)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      14,
+      15
+     ],
+     "fires_after_utterance": 15,
+     "agent": "scribe",
+     "confidence": 0.94,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "asa_tolerance",
+     "section": "history",
+     "label": "Aspirin Tolerance (Volunteered)",
+     "value": "Takes OTC aspirin intermittently for headaches without reaction — supports protocol ASA dosing",
+     "source_type": "transcript",
+     "utterance_indices": [
+      11
+     ],
+     "fires_after_utterance": 11,
+     "agent": "scribe",
+     "confidence": 0.82,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "cardiac_risk_factors",
+     "section": "history",
+     "label": "Cardiac Risk Factors (Derived)",
+     "value": "HTN (untreated x2 weeks), hyperlipidemia (statin adherence uncertain), ~30 pack-year current smoking, male age 54, crescendo exertional pattern; no known prior CAD/MI",
+     "source_type": "agent_inference",
+     "utterance_indices": [
+      9,
+      13,
+      15,
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "esi",
+     "confidence": 0.81,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "abuse_safety_screen",
+     "section": "screenings",
+     "label": "Safety / Abuse Screen",
+     "value": "Negative — reports feeling safe where he is staying",
+     "source_type": "transcript",
+     "utterance_indices": [
+      20,
+      21
+     ],
+     "fires_after_utterance": 21,
+     "agent": "scribe",
+     "confidence": 0.68,
+     "requires_verification": true,
+     "nurse_documented": true
+    },
+    {
+     "id": "suicide_risk_screen",
+     "section": "screenings",
+     "label": "Suicide Risk Screen",
+     "value": "Negative — denies thoughts of self-harm or suicide",
+     "source_type": "transcript",
+     "utterance_indices": [
+      22,
+      23
+     ],
+     "fires_after_utterance": 23,
+     "agent": "scribe",
+     "confidence": 0.92,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "hiv_screening_offer",
+     "section": "screenings",
+     "label": "HIV Screening Offer (Universal Opt-Out)",
+     "value": "Offered per universal ED policy — accepted; run from same blood draw as cardiac labs",
+     "source_type": "transcript",
+     "utterance_indices": [
+      24,
+      25
+     ],
+     "fires_after_utterance": 25,
+     "agent": "scribe",
+     "confidence": 0.92,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "housing_status",
+     "section": "social",
+     "label": "Housing Status (Volunteered)",
+     "value": "Staying at Harbor Light shelter, Chelsea, ~3 months, following eviction; reports feeling safe there",
+     "source_type": "transcript",
+     "utterance_indices": [
+      17,
+      21
+     ],
+     "fires_after_utterance": 21,
+     "agent": "scribe",
+     "confidence": 0.88,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "insurance_coverage",
+     "section": "social",
+     "label": "Insurance Coverage (Volunteered)",
+     "value": "Uninsured since warehouse layoff; could not afford ~$40 lisinopril refill",
+     "source_type": "transcript",
+     "utterance_indices": [
+      5,
+      13
+     ],
+     "fires_after_utterance": 13,
+     "agent": "scribe",
+     "confidence": 0.84,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "cost_related_care_delay",
+     "section": "social",
+     "label": "Cost-Related Care Delay (Volunteered)",
+     "value": "Delayed today's presentation while weighing cost of an uninsured visit; prior exertional episodes never evaluated due to no coverage",
+     "source_type": "transcript",
+     "utterance_indices": [
+      5,
+      9
+     ],
+     "fires_after_utterance": 9,
+     "agent": "scribe",
+     "confidence": 0.86,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "support_system",
+     "section": "social",
+     "label": "Support System (Volunteered)",
+     "value": "Sister in Lynn — \"she'd want a call\" (contact consent implied, not explicit — confirm); case worker Denise at Harbor Light shelter",
+     "source_type": "transcript",
+     "utterance_indices": [
+      21
+     ],
+     "fires_after_utterance": 21,
+     "agent": "scribe",
+     "confidence": 0.68,
+     "requires_verification": true,
+     "nurse_documented": false
+    },
+    {
+     "id": "care_access_barriers",
+     "section": "social",
+     "label": "Care Access Barriers (Derived)",
+     "value": "Likely no current primary care or medication access — cost-driven nonadherence inferred from med lapse, coverage loss, and unevaluated symptoms; needs enrollment and med-access pathway",
+     "source_type": "agent_inference",
+     "utterance_indices": [
+      5,
+      9,
+      13,
+      17
+     ],
+     "fires_after_utterance": 17,
+     "agent": "routing",
+     "confidence": 0.58,
+     "requires_verification": true,
+     "nurse_documented": false
+    }
+   ]
+  },
+  "esi": {
+   "level": 2,
+   "label": "Emergent",
+   "rationale": "ESI v5 decision point A is not met — no immediate lifesaving intervention is required (airway patent, SpO2 97% on room air, hemodynamically stable). Decision point B is met: exertional substernal pressure radiating to the left arm and jaw with diaphoresis and nausea in a 54-year-old smoker with untreated hypertension and hyperlipidemia is a classic high-risk ACS presentation that should not wait, mandating level 2 before resource counting at decision point C. Decision point D vital-sign uptriage does not apply beyond level 2; BP 158/94 and HR 96 are noted but are not danger-zone criteria.",
+   "decision_points": {
+    "a_lifesaving": false,
+    "b_high_risk": true,
+    "c_resources": "Not reached — level assigned at B; anticipated resources would exceed 2 regardless (serial troponin, repeat ECG, IV access, telemetry)",
+    "d_vital_signs": "No danger-zone vital signs; BP 158/94 and HR 96 documented, no further uptriage indicated"
+   },
+   "confidence": 0.93,
+   "fires_after_utterance": 27
+  },
+  "routing": {
+   "zone": "Acute care — cardiac",
+   "bed": "Monitored cardiac room (Bed A-4)",
+   "monitoring": "Continuous telemetry with serial vital signs",
+   "resources": [
+    {
+     "name": "Serial troponin",
+     "rationale": "Rule out myocardial infarction; first draw with IV start, repeat per ACS pathway"
+    },
+    {
+     "name": "Repeat 12-lead ECG",
+     "rationale": "Initial ECG nondiagnostic (nonspecific ST-T changes); repeat in 30-60 minutes or with any symptom change to catch evolving injury"
+    },
+    {
+     "name": "IV access and blood draw",
+     "rationale": "ACS workup labs and medication route if pain escalates"
+    },
+    {
+     "name": "Physician evaluation within 10 minutes",
+     "rationale": "ESI 2 — high-risk ACS presentation should not wait for rooming queue"
+    },
+    {
+     "name": "Social work consult",
+     "rationale": "Uninsured after layoff with 2-week lisinopril/atorvastatin lapse due to cost and shelter residence — begin bedside MassHealth enrollment, arrange medication access, and establish PCP linkage so the cause of today's visit is addressed, not just the symptom"
+    },
+    {
+     "name": "HIV screening (opt-out, accepted)",
+     "rationale": "Universal ED HIV screening offered per opt-out policy and accepted by patient — add to the initial blood draw with ACS labs so no additional venipuncture is needed"
+    }
+   ],
+   "rationale": "High-risk chest pain routes to the acute cardiac zone with continuous telemetry and immediate physician notification. Aspirin given and ECG completed at triage; disposition-critical social drivers (coverage loss, medication lapse, shelter residence) are assigned to social work in parallel so cardiac workup and access barriers are addressed in the same visit.",
+   "fires_after_utterance": 28
+  },
+  "nurse_note": "54M mid-sternal chest pressure x1 hr, onset lifting at work, radiates L arm/jaw, 6/10.",
+  "physician_note": "**S:**\n- 54M presenting with mid-sternal chest pressure x1 hour, radiating to the left arm and jaw.\n- Onset ~1 hour prior to arrival while lifting boxes at a day-labor site in Everett; describes heavy mid-sternal pressure, \"like somebody's standing on it.\"\n- Radiated down the left arm and up into the jaw on the bus ride in; at triage the arm is still involved \"a little,\" jaw no longer mentioned.\n- Severity 6/10 at triage; states it reached 7/10 while still carrying boxes. Reports sweating \"clean through my shirt\" during the episode.\n- Course: pain still present at triage (6/10, left arm still involved); states he waited a while before coming in, weighing the cost of an uninsured visit.\n- Reports milder exertional tightness episodes over the past few weeks (pushing a cart uphill) that stop with rest; states these were never evaluated (\"No coverage\").\n- Pertinent ROS positives spoken at triage: diaphoresis during the episode; mild nausea (\"stomach's turning a little\"); ongoing left arm radiation.\n- Pertinent ROS negatives spoken at triage: denies shortness of breath at rest; denies vomiting.\n- Home meds as reported: lisinopril 20 mg and atorvastatin 40 mg (\"supposed to be, anyway\"); states lisinopril ran out 2 weeks ago — refill was ~$40 without insurance and unaffordable. NKDA; takes OTC aspirin intermittently for headaches without reaction.\n- Social as reported: smokes ~1 pack/day x ~30 years. Uninsured since a warehouse layoff. Staying at Harbor Light shelter (Chelsea) ~3 months since an eviction; reports feeling safe there. Sister in Lynn; case worker Denise at the shelter. States his BP is \"always up\" when checked.\n- Screens as answered: denies thoughts of self-harm or suicide; accepted the universally offered HIV test.\n\n**O:**\n- Vitals 14:46 — HR 96, BP 158/94, RR 18, SpO2 97% RA, T 36.8 °C, wt 92 kg, pain 6/10.\n- Recheck 14:58 — HR 92, BP 152/90, RR 16, SpO2 98% RA, T 36.8, pain 5/10, after aspirin and rest on the monitor.\n- Alert and conversational, speaking in full sentences throughout triage; no labored breathing or tripoding observed.\n- 12-lead ECG 14:50 (~8 min from arrival): normal sinus rhythm at 96 bpm, nonspecific ST-T wave changes, no ST-segment elevation, no STEMI pattern; sent to ED physician for over-read.\n- Aspirin 324 mg PO (4 x 81 mg chewable) chewed at 14:49 per standing protocol; tolerated. Pain 6/10 → 5/10 on recheck.\n- Continuous cardiac monitoring in place.",
+  "nurse_orders": [
+   {
+    "id": "no-ecg-01",
+    "name": "12-lead ECG",
+    "detail": "Completed 14:50, ~8 min from arrival. Preliminary: NSR, nonspecific ST-T changes, no ST elevation / no STEMI pattern. Sent to ED physician for over-read.",
+    "status": "placed",
+    "placed_by": "RN — triage protocol",
+    "time": "2026-07-18T14:50:00-04:00"
+   },
+   {
+    "id": "no-asa-02",
+    "name": "Aspirin 324 mg PO, chewed",
+    "detail": "4 x 81 mg chewable administered 14:49 per ED chest pain standing protocol; NKDA, no prior aspirin reaction; tolerated.",
+    "status": "placed",
+    "placed_by": "RN — triage protocol",
+    "time": "2026-07-18T14:49:00-04:00"
+   }
+  ],
+  "suggested_orders": [
+   {
+    "id": "so-trop-01",
+    "name": "High-sensitivity troponin — now + 2 h repeat",
+    "detail": "hs-cTn on arrival draw with repeat at 2 hours per ACS rule-out pathway",
+    "rationale": "Serial troponin required to exclude MI with a nondiagnostic initial ECG"
+   },
+   {
+    "id": "so-lab-02",
+    "name": "CBC + BMP",
+    "detail": "Add to initial venipuncture",
+    "rationale": "Baseline counts, electrolytes, and renal function ahead of ACS therapy and ACE-inhibitor restart"
+   },
+   {
+    "id": "so-cxr-03",
+    "name": "Portable chest X-ray",
+    "detail": "Single-view portable in cardiac zone",
+    "rationale": "Screens for widened mediastinum and non-ACS causes of chest pressure"
+   },
+   {
+    "id": "so-ecg-04",
+    "name": "Repeat 12-lead ECG",
+    "detail": "In 30-60 minutes, or immediately with any symptom change",
+    "rationale": "Nonspecific ST-T changes can evolve — repeat catches a dynamic injury pattern"
+   },
+   {
+    "id": "so-iv-05",
+    "name": "IV access + saline lock",
+    "detail": "Peripheral IV with all labs drawn at placement (including accepted HIV screen)",
+    "rationale": "Secures a medication route and covers every lab in one venipuncture"
+   },
+   {
+    "id": "so-sw-06",
+    "name": "Social work consult",
+    "detail": "Bedside MassHealth enrollment, medication-access program for lisinopril/atorvastatin, PCP linkage",
+    "rationale": "Cost-driven med lapse and coverage loss precipitated today's visit — treat the access barrier, not just the symptom"
+   }
+  ],
+  "template": {
+   "smartphrase": ".TRIAGECP",
+   "display_name": "Chest Pain",
+   "selected_after_utterance": 3,
+   "extra_slots": [
+    {
+     "section": "hpi",
+     "label": "Provocation / palliation"
+    },
+    {
+     "section": "hpi",
+     "label": "Timing — constant or intermittent"
+    },
+    {
+     "section": "history",
+     "label": "Family history of early CAD"
+    }
+   ]
+  },
+  "vitals_trend": {
+   "rows": [
+    "HR",
+    "BP",
+    "RR",
+    "SpO2",
+    "Temp",
+    "Pain"
+   ],
+   "columns": [
+    {
+     "label": "14:46",
+     "fires_after_utterance": 16,
+     "values": {
+      "HR": "96",
+      "BP": "158/94",
+      "RR": "18",
+      "SpO2": "97% RA",
+      "Temp": "36.8",
+      "Pain": "6/10"
+     }
+    },
+    {
+     "label": "14:58 (recheck)",
+     "fires_after_utterance": 29,
+     "values": {
+      "HR": "92",
+      "BP": "152/90",
+      "RR": "16",
+      "SpO2": "98% RA",
+      "Temp": "36.8",
+      "Pain": "5/10"
+     }
+    }
+   ]
+  },
+  "sentiment": {
+   "score": 7.1,
+   "scale_note": "1 = highly strained interaction · 10 = exceptionally attuned",
+   "percentile": 68,
+   "reference_n": "241,378 scored ED triage conversations",
+   "analysis": [
+    "Patient volunteers well past each question — the cost-of-visit math and insurance loss arrive unprompted at \"When did it start?\", weeks of prior episodes at a radiation check, and the shelter stay at the BP readback — with mild anxiety markers (\"Tell you the truth,\" \"I'll be honest\") framing the disclosures.",
+    "Nurse runs brisk and closed-ended — scaled and yes/no questions (\"zero to ten?\", \"Any vomiting?\", \"Do you smoke?\") with minimal acknowledgment tokens (\"Okay,\" \"Mm-hm\"); the cost-fear disclosure gets an \"Okay\" and a pivot to the next item rather than verbal engagement.",
+    "Cooperation never breaks and judgment never surfaces: patient answers every screen directly despite disclosing smoking, med lapse, and shelter residence without pushback from the nurse, and the closing turn uses his name with explicit reassurance (\"You're not going back to the waiting room, Marcus\") — high information yield overall."
+   ],
+   "calibration_note": "Score recalibrates nightly as newly captured conversations are scored — recent encounters weight the reference distribution, so comparable interactions converge over time."
+  }
+ }
+}

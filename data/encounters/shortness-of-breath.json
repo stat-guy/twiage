@@ -1,0 +1,1402 @@
+{
+ "id": "b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14::f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72",
+ "metadata": {
+  "source": "synthetic-ambient-triage-v2",
+  "synthetic": true,
+  "patient_id": "b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14",
+  "encounter_id": "f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72",
+  "encounter_reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72",
+  "date": "2026-07-18T21:47:00-04:00",
+  "status": "in-progress",
+  "visit_type": "Emergency room admission (procedure)",
+  "document_status": "preliminary",
+  "related_resource_counts": {
+   "Condition": 1,
+   "Observation": 9
+  },
+  "visit_title": "ED triage — acute asthma exacerbation with hypoxemia after cat allergen exposure"
+ },
+ "patient_context": {
+  "patient": {
+   "resourceType": "Patient",
+   "id": "b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14",
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+     "extension": [
+      {
+       "url": "ombCategory",
+       "valueCoding": {
+        "system": "urn:oid:2.16.840.1.113883.6.238",
+        "code": "2054-5",
+        "display": "Black or African American"
+       }
+      },
+      {
+       "url": "text",
+       "valueString": "Black or African American"
+      }
+     ]
+    },
+    {
+     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+     "extension": [
+      {
+       "url": "ombCategory",
+       "valueCoding": {
+        "system": "urn:oid:2.16.840.1.113883.6.238",
+        "code": "2186-5",
+        "display": "Not Hispanic or Latino"
+       }
+      },
+      {
+       "url": "text",
+       "valueString": "Not Hispanic or Latino"
+      }
+     ]
+    }
+   ],
+   "name": [
+    {
+     "use": "official",
+     "family": "Okafor",
+     "given": [
+      "Dana",
+      "Amara"
+     ],
+     "prefix": [
+      "Ms."
+     ]
+    }
+   ],
+   "gender": "female",
+   "birthDate": "1992-06-02",
+   "maritalStatus": {
+    "coding": [
+     {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code": "M",
+      "display": "Married"
+     }
+    ],
+    "text": "Married"
+   },
+   "address": [
+    {
+     "city": "Boston",
+     "state": "MA",
+     "country": "US"
+    }
+   ],
+   "communication": [
+    {
+     "language": {
+      "coding": [
+       {
+        "system": "urn:ietf:bcp:47",
+        "code": "en-US",
+        "display": "English (United States)"
+       }
+      ],
+      "text": "English (United States)"
+     }
+    }
+   ]
+  },
+  "longitudinal_summary": {
+   "resource_counts": {
+    "AllergyIntolerance": 2,
+    "CarePlan": 1,
+    "Condition": 5,
+    "DiagnosticReport": 7,
+    "DocumentReference": 10,
+    "Encounter": 13,
+    "Immunization": 9,
+    "Medication": 2,
+    "MedicationRequest": 7,
+    "Observation": 58,
+    "Patient": 1,
+    "Procedure": 9
+   },
+   "condition_labels": [
+    "Asthma (disorder)",
+    "Atopic dermatitis (disorder)",
+    "Allergy to cat dander (finding)",
+    "Received higher education (finding)",
+    "Full-time employment (finding)"
+   ],
+   "medication_labels": [
+    "Albuterol 90 mcg/actuation metered dose inhaler",
+    "Fluticasone propionate 110 mcg/actuation metered dose inhaler"
+   ]
+  }
+ },
+ "encounter_fhir": {
+  "encounter": {
+   "resourceType": "Encounter",
+   "id": "f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72",
+   "meta": {
+    "profile": [
+     "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+    ]
+   },
+   "identifier": [
+    {
+     "use": "official",
+     "system": "https://github.com/stat-guy/twiage",
+     "value": "f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+    }
+   ],
+   "status": "in-progress",
+   "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "EMER"
+   },
+   "type": [
+    {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "50849002",
+       "display": "Emergency room admission (procedure)"
+      }
+     ],
+     "text": "Emergency room admission (procedure)"
+    }
+   ],
+   "subject": {
+    "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14",
+    "display": "Ms. Dana Amara Okafor"
+   },
+   "participant": [
+    {
+     "type": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+         "code": "PART",
+         "display": "Participation"
+        }
+       ],
+       "text": "triage nurse"
+      }
+     ],
+     "period": {
+      "start": "2026-07-18T21:47:00-04:00"
+     },
+     "individual": {
+      "display": "Marisol Vega, RN — ED Triage"
+     }
+    }
+   ],
+   "period": {
+    "start": "2026-07-18T21:47:00-04:00"
+   },
+   "location": [
+    {
+     "location": {
+      "display": "Riverside Regional Emergency Department — Triage"
+     }
+    }
+   ],
+   "serviceProvider": {
+    "display": "Riverside Regional Emergency Department"
+   }
+  },
+  "related_resources": {
+   "Condition": [
+    {
+     "resourceType": "Condition",
+     "id": "f2a6e8c4-7d19-4b5e-0010-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+      ]
+     },
+     "clinicalStatus": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+       }
+      ]
+     },
+     "verificationStatus": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "provisional"
+       }
+      ]
+     },
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+         "code": "encounter-diagnosis",
+         "display": "Encounter Diagnosis"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "281239006",
+        "display": "Exacerbation of asthma (disorder)"
+       }
+      ],
+      "text": "Exacerbation of asthma (disorder)"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "onsetDateTime": "2026-07-18T15:45:00-04:00",
+     "recordedDate": "2026-07-18T21:55:00-04:00"
+    }
+   ],
+   "Observation": [
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0001-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "8867-4",
+        "display": "Heart rate"
+       }
+      ],
+      "text": "Heart rate"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueQuantity": {
+      "value": 108,
+      "unit": "/min",
+      "system": "http://unitsofmeasure.org",
+      "code": "/min"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0002-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "9279-1",
+        "display": "Respiratory rate"
+       }
+      ],
+      "text": "Respiratory rate"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueQuantity": {
+      "value": 28,
+      "unit": "/min",
+      "system": "http://unitsofmeasure.org",
+      "code": "/min"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0003-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "85354-9",
+        "display": "Blood pressure panel with all children optional"
+       }
+      ],
+      "text": "Blood pressure panel with all children optional"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "component": [
+      {
+       "code": {
+        "coding": [
+         {
+          "system": "http://loinc.org",
+          "code": "8480-6",
+          "display": "Systolic Blood Pressure"
+         }
+        ],
+        "text": "Systolic Blood Pressure"
+       },
+       "valueQuantity": {
+        "value": 132,
+        "unit": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+       }
+      },
+      {
+       "code": {
+        "coding": [
+         {
+          "system": "http://loinc.org",
+          "code": "8462-4",
+          "display": "Diastolic Blood Pressure"
+         }
+        ],
+        "text": "Diastolic Blood Pressure"
+       },
+       "valueQuantity": {
+        "value": 84,
+        "unit": "mm[Hg]",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+       }
+      }
+     ]
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0004-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "2708-6",
+        "display": "Oxygen saturation in Arterial blood"
+       },
+       {
+        "system": "http://loinc.org",
+        "code": "59408-5",
+        "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+       }
+      ],
+      "text": "Oxygen saturation in Arterial blood"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueQuantity": {
+      "value": 91,
+      "unit": "%",
+      "system": "http://unitsofmeasure.org",
+      "code": "%"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0005-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "8310-5",
+        "display": "Body temperature"
+       }
+      ],
+      "text": "Body temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueQuantity": {
+      "value": 37.1,
+      "unit": "Cel",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0006-6e1f9d0b4a72",
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "72514-3",
+        "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+       }
+      ],
+      "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueQuantity": {
+      "value": 0,
+      "unit": "{score}",
+      "system": "http://unitsofmeasure.org",
+      "code": "{score}"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0007-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "vital-signs",
+         "display": "Vital signs"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body Weight"
+       }
+      ],
+      "text": "Body Weight"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueQuantity": {
+      "value": 70,
+      "unit": "kg",
+      "system": "http://unitsofmeasure.org",
+      "code": "kg"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0008-6e1f9d0b4a72",
+     "meta": {
+      "profile": [
+       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+      ]
+     },
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "social-history",
+         "display": "Social history"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://loinc.org",
+        "code": "72166-2",
+        "display": "Tobacco smoking status"
+       }
+      ],
+      "text": "Tobacco smoking status"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "266919005",
+        "display": "Never smoked tobacco (finding)"
+       }
+      ],
+      "text": "Never smoked tobacco (finding)"
+     }
+    },
+    {
+     "resourceType": "Observation",
+     "id": "f2a6e8c4-7d19-4b5e-0009-6e1f9d0b4a72",
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "exam",
+         "display": "Exam"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "http://snomed.info/sct",
+        "code": "56018004",
+        "display": "Wheezing (finding)"
+       }
+      ],
+      "text": "Breath sounds and work of breathing"
+     },
+     "subject": {
+      "reference": "urn:uuid:b4d7c9e2-51a8-4f3b-9e6d-0a2c8f5b7d14"
+     },
+     "encounter": {
+      "reference": "urn:uuid:f2a6e8c4-7d19-4b5e-8c3a-6e1f9d0b4a72"
+     },
+     "effectiveDateTime": "2026-07-18T21:52:00-04:00",
+     "issued": "2026-07-18T21:52:00.000-04:00",
+     "valueString": "Loud bilateral expiratory wheezes audible without a stethoscope; accessory muscle use with tripoding; speech limited to short phrases"
+    }
+   ]
+  }
+ },
+ "transcript": "NURSE: Dana Okafor, date of birth June second, nineteen ninety-two?\nPT: Yes. That's... me.\nFAMILY: I'm Simone, her wife — she can't really talk right now, so I'll answer what I can. I drove her straight in.\nNURSE: Okay. Dana — what's the main problem today?\nPT: Can't get... a full breath. Wheezing... since this afternoon.\nNURSE: What time did it start?\nFAMILY: A little before four. We were at our friend Marcus's new place — he just got two cats, and she's badly allergic to cats. She was already wheezing when we left.\nNURSE: Okay. Pulse ox going on your finger — 91 percent on room air, heart rate 108. Zero to ten, how hard is it to breathe right now?\nPT: Eight.\nNURSE: Did you use your rescue inhaler tonight?\nPT: Four times. Didn't... touch it.\nFAMILY: Normally one round of the albuterol fixes her. And she's been out of her steroid inhaler, the fluticasone, for three weeks — our insurance switched in June and the mail-order refills just stopped coming. I think she was stretching the last doses to make them last.\nNURSE: Mm-hm. Blood pressure 132 over 84. You're breathing 28 times a minute, leaning forward on your arms, and using your neck muscles. Any chest pain?\nPT: No. Just tight... from the wheezing.\nNURSE: Any fever or chills at home? Coughing anything up?\nPT: No fever. No chills. No... cough.\nFAMILY: She's been in an ER for asthma twice before — once in college, once about four years ago. Admitted overnight both times, but never a breathing tube. Tonight looks worse to me.\nNURSE: Okay. Temperature 37.1 — no fever here either. Chair scale put you at 70 kilograms. Any allergies to medications?\nFAMILY: No drug allergies. Just cats and dust — and she has the eczema too, the whole allergy package.\nNURSE: Home medications — just the two inhalers, the albuterol and the fluticasone?\nFAMILY: That's it, nothing else. Oh — and I'm her health care proxy. We did the paperwork last year, if you need that on file.\nNURSE: Okay. Dana, any pain anywhere right now, zero to ten?\nPT: Zero. Just... can't breathe.\nNURSE: Quick checklist I ask everyone. Do you feel safe at home?\nPT: Yes.\nNURSE: Any thoughts of hurting yourself in the past few weeks?\nPT: No.\nNURSE: We offer an HIV test to everyone in this ED — want it added to your labs today?\nPT: Sure.\nNURSE: Done. You're not waiting out here — we're going straight back to respiratory bay 4, breathing treatment and an oxygen monitor the second you're on the bed. Simone, you come with her.",
+ "note": "**Subjective:** 34-year-old woman with known asthma presents unable to get a full breath, wheezing since shortly before 4 PM after cat exposure at a friend's home. Breathing difficulty 8/10; albuterol rescue inhaler used four times tonight without relief. Two prior ED visits for asthma with overnight admission. Denies chest pain, fever, chills, and productive cough. NKDA; environmental allergies to cats and dust. Feels safe at home; suicide screen negative; accepted opt-out HIV testing.\n\n**Objective:** T 37.1 °C, HR 108, RR 28, BP 132/84, SpO2 91% on room air, weight 70 kg, pain 0/10. Tripod positioning with accessory neck muscle use; speech in short phrases; loud expiratory wheezes.\n\n**Assessment and Plan:** Acute asthma exacerbation with hypoxemia, refractory to home albuterol — ESI level 2, high-risk respiratory. Roomed directly to acute respiratory bay 4 with wife at bedside. Albuterol nebulizer started and continuous pulse oximetry placed per standing asthma protocol; physician notified for immediate evaluation.",
+ "after_visit_summary": "Visit summary\n\nWhat we discussed\n• A sudden asthma flare that started after being around cats at a friend's home and did not improve after four uses of your rescue inhaler.\n• Your oxygen level (91%) and fast breathing made this flare serious, so you were taken straight back to the respiratory bay instead of waiting.\n• The routine questions we ask every patient, including the HIV test we offer everyone — you chose to have it today.\n\nNext steps\n• A breathing treatment (albuterol) has been started, and you are on a continuous oxygen monitor.\n• The emergency doctor will see you within a few minutes and may add more treatments, including a steroid medicine.\n• The HIV test will be run with blood work you are already having — you can change your mind any time before the draw.\n• The care team will work on fixing your daily controller inhaler (fluticasone) refill before you leave.\n• Your wife Simone can stay at your bedside the whole time.",
+ "after_visit_summary_provenance": {
+  "method": "deterministic_extractive_v1",
+  "source": "clinical_note_assessment_and_plan",
+  "review_status": "not_clinically_reviewed"
+ },
+ "triage": {
+  "chief_complaint": "Can't get a full breath. Wheezing since this afternoon.",
+  "form": {
+   "sections": [
+    {
+     "id": "arrival",
+     "title": "Arrival & Identification"
+    },
+    {
+     "id": "vitals",
+     "title": "Vital Signs & Objective Observations"
+    },
+    {
+     "id": "hpi",
+     "title": "History of Present Illness"
+    },
+    {
+     "id": "red_flags",
+     "title": "Red Flags"
+    },
+    {
+     "id": "history",
+     "title": "History, Allergies & Medications"
+    },
+    {
+     "id": "screenings",
+     "title": "Standard Screenings"
+    },
+    {
+     "id": "social",
+     "title": "Social Drivers of Health"
+    }
+   ],
+   "fields": [
+    {
+     "id": "chief_complaint",
+     "section": "arrival",
+     "label": "Chief complaint (patient's own words)",
+     "value": "\"Can't get a full breath. Wheezing since this afternoon.\"",
+     "source_type": "transcript",
+     "utterance_indices": [
+      3,
+      4
+     ],
+     "fires_after_utterance": 4,
+     "agent": "scribe",
+     "confidence": 0.95,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "arrival_mode",
+     "section": "arrival",
+     "label": "Arrival mode",
+     "value": "Ambulatory — driven in by wife (private vehicle)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      2
+     ],
+     "fires_after_utterance": 2,
+     "agent": "scribe",
+     "confidence": 0.82,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "accompanied_by",
+     "section": "arrival",
+     "label": "Accompanied by",
+     "value": "Wife, Simone, at bedside — answering history questions while patient is too breathless to speak",
+     "source_type": "transcript",
+     "utterance_indices": [
+      2
+     ],
+     "fires_after_utterance": 2,
+     "agent": "scribe",
+     "confidence": 0.9,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "healthcare_proxy",
+     "section": "arrival",
+     "label": "Health care proxy",
+     "value": "Wife states she is patient's health care proxy (\"we did the paperwork last year\") — not yet verified against chart",
+     "source_type": "transcript",
+     "utterance_indices": [
+      20
+     ],
+     "fires_after_utterance": 20,
+     "agent": "scribe",
+     "confidence": 0.66,
+     "requires_verification": true,
+     "nurse_documented": false
+    },
+    {
+     "id": "vs_spo2",
+     "section": "vitals",
+     "label": "SpO2 (room air)",
+     "value": "91",
+     "unit": "%",
+     "source_type": "device",
+     "utterance_indices": [
+      7
+     ],
+     "fires_after_utterance": 7,
+     "agent": "vitals",
+     "confidence": 0.99,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "vs_heart_rate",
+     "section": "vitals",
+     "label": "Heart rate",
+     "value": "108",
+     "unit": "bpm",
+     "source_type": "device",
+     "utterance_indices": [
+      7
+     ],
+     "fires_after_utterance": 7,
+     "agent": "vitals",
+     "confidence": 0.99,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "vs_respiratory_rate",
+     "section": "vitals",
+     "label": "Respiratory rate",
+     "value": "28",
+     "unit": "breaths/min",
+     "source_type": "device",
+     "utterance_indices": [
+      12
+     ],
+     "fires_after_utterance": 12,
+     "agent": "vitals",
+     "confidence": 0.97,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "vs_blood_pressure",
+     "section": "vitals",
+     "label": "Blood pressure",
+     "value": "132/84",
+     "unit": "mmHg",
+     "source_type": "device",
+     "utterance_indices": [
+      12
+     ],
+     "fires_after_utterance": 12,
+     "agent": "vitals",
+     "confidence": 0.98,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "vs_temperature",
+     "section": "vitals",
+     "label": "Temperature",
+     "value": "37.1",
+     "unit": "°C",
+     "source_type": "device",
+     "utterance_indices": [
+      17
+     ],
+     "fires_after_utterance": 17,
+     "agent": "vitals",
+     "confidence": 0.98,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "vs_weight",
+     "section": "vitals",
+     "label": "Weight",
+     "value": "70",
+     "unit": "kg",
+     "source_type": "device",
+     "utterance_indices": [
+      17
+     ],
+     "fires_after_utterance": 17,
+     "agent": "vitals",
+     "confidence": 0.97,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "vs_pain_score",
+     "section": "vitals",
+     "label": "Pain score (0-10)",
+     "value": "0",
+     "unit": "/10",
+     "source_type": "transcript",
+     "utterance_indices": [
+      21,
+      22
+     ],
+     "fires_after_utterance": 22,
+     "agent": "vitals",
+     "confidence": 0.96,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "obs_work_of_breathing",
+     "section": "vitals",
+     "label": "Work of breathing",
+     "value": "Increased — tripod positioning (leaning forward on arms) with accessory neck muscle use, noted aloud by RN",
+     "source_type": "transcript",
+     "utterance_indices": [
+      12
+     ],
+     "fires_after_utterance": 12,
+     "agent": "vitals",
+     "confidence": 0.9,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "obs_speech_pattern",
+     "section": "vitals",
+     "label": "Speech pattern",
+     "value": "Speech limited to short phrases throughout triage; wife answering most history questions to spare patient's breath",
+     "source_type": "agent_inference",
+     "utterance_indices": [
+      2,
+      4,
+      10,
+      22
+     ],
+     "fires_after_utterance": 22,
+     "agent": "vitals",
+     "confidence": 0.72,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "hpi_onset",
+     "section": "hpi",
+     "label": "Onset",
+     "value": "Shortly before 4 PM (~6 h before arrival), during a visit to a friend's home",
+     "source_type": "transcript",
+     "utterance_indices": [
+      4,
+      5,
+      6
+     ],
+     "fires_after_utterance": 6,
+     "agent": "scribe",
+     "confidence": 0.88,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "hpi_trigger_cat",
+     "section": "hpi",
+     "label": "Trigger / exposure",
+     "value": "Cat exposure this evening — friend's home with two new cats; patient badly allergic to cats per wife",
+     "source_type": "transcript",
+     "utterance_indices": [
+      6
+     ],
+     "fires_after_utterance": 6,
+     "agent": "scribe",
+     "confidence": 0.88,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "hpi_severity",
+     "section": "hpi",
+     "label": "Severity — breathing difficulty (0-10)",
+     "value": "8/10 difficulty breathing at triage",
+     "source_type": "transcript",
+     "utterance_indices": [
+      7,
+      8
+     ],
+     "fires_after_utterance": 8,
+     "agent": "scribe",
+     "confidence": 0.93,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "hpi_home_albuterol",
+     "section": "hpi",
+     "label": "Home treatment before arrival",
+     "value": "Albuterol rescue inhaler used four times tonight with no relief",
+     "source_type": "transcript",
+     "utterance_indices": [
+      9,
+      10
+     ],
+     "fires_after_utterance": 10,
+     "agent": "scribe",
+     "confidence": 0.9,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "hpi_pattern_prior",
+     "section": "hpi",
+     "label": "Pattern vs prior episodes",
+     "value": "Refractory course atypical for her — prior flares typically resolve after one round of albuterol (per wife)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      10,
+      11
+     ],
+     "fires_after_utterance": 11,
+     "agent": "scribe",
+     "confidence": 0.78,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "rf_chest_pain",
+     "section": "red_flags",
+     "label": "Chest pain",
+     "value": "Denied — no chest pain; reports diffuse tightness attributed to wheezing",
+     "source_type": "transcript",
+     "utterance_indices": [
+      12,
+      13
+     ],
+     "fires_after_utterance": 13,
+     "agent": "scribe",
+     "confidence": 0.88,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "rf_fever_cough",
+     "section": "red_flags",
+     "label": "Fever / productive cough",
+     "value": "Denied — no fever, chills, or productive cough; afebrile at triage (37.1 °C)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      14,
+      15,
+      17
+     ],
+     "fires_after_utterance": 17,
+     "agent": "scribe",
+     "confidence": 0.86,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "hx_allergies",
+     "section": "history",
+     "label": "Allergies",
+     "value": "NKDA (no known drug allergies). Environmental: cats, dust",
+     "source_type": "transcript",
+     "utterance_indices": [
+      17,
+      18
+     ],
+     "fires_after_utterance": 18,
+     "agent": "scribe",
+     "confidence": 0.9,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "hx_prior_ed_admissions",
+     "section": "history",
+     "label": "Prior ED visits for asthma",
+     "value": "Two prior ED visits for asthma, both with overnight admission (once in college, once ~4 years ago)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "scribe",
+     "confidence": 0.66,
+     "requires_verification": true,
+     "nurse_documented": true
+    },
+    {
+     "id": "hx_controller_lapse",
+     "section": "history",
+     "label": "Controller medication lapse",
+     "value": "Out of fluticasone controller inhaler ~3 weeks — mail-order refills stopped after June insurance plan switch (per wife)",
+     "source_type": "transcript",
+     "utterance_indices": [
+      11
+     ],
+     "fires_after_utterance": 11,
+     "agent": "scribe",
+     "confidence": 0.82,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "hx_never_intubated",
+     "section": "history",
+     "label": "Intubation history",
+     "value": "Never intubated per wife (\"never a breathing tube\"); prior ED stays were overnight admissions",
+     "source_type": "transcript",
+     "utterance_indices": [
+      16
+     ],
+     "fires_after_utterance": 16,
+     "agent": "scribe",
+     "confidence": 0.84,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "hx_atopy_eczema",
+     "section": "history",
+     "label": "Eczema / atopic history",
+     "value": "Eczema reported by wife in passing (\"she has the eczema too\") — confirm with patient",
+     "source_type": "transcript",
+     "utterance_indices": [
+      18
+     ],
+     "fires_after_utterance": 18,
+     "agent": "scribe",
+     "confidence": 0.68,
+     "requires_verification": true,
+     "nurse_documented": false
+    },
+    {
+     "id": "scr_safety_ipv",
+     "section": "screenings",
+     "label": "Safety at home (IPV screen)",
+     "value": "Reports feeling safe at home — partner present at triage; complete private re-screen per policy",
+     "source_type": "transcript",
+     "utterance_indices": [
+      23,
+      24
+     ],
+     "fires_after_utterance": 24,
+     "agent": "scribe",
+     "confidence": 0.64,
+     "requires_verification": true,
+     "nurse_documented": true
+    },
+    {
+     "id": "scr_suicide",
+     "section": "screenings",
+     "label": "Suicide risk screen",
+     "value": "Negative brief screen — denies thoughts of self-harm in the past few weeks",
+     "source_type": "transcript",
+     "utterance_indices": [
+      25,
+      26
+     ],
+     "fires_after_utterance": 26,
+     "agent": "scribe",
+     "confidence": 0.88,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "scr_hiv_offer",
+     "section": "screenings",
+     "label": "HIV screening offer (opt-out)",
+     "value": "Offered per universal opt-out policy; accepted — add HIV test to ED labs",
+     "source_type": "transcript",
+     "utterance_indices": [
+      27,
+      28
+     ],
+     "fires_after_utterance": 28,
+     "agent": "scribe",
+     "confidence": 0.9,
+     "requires_verification": false,
+     "nurse_documented": true
+    },
+    {
+     "id": "sdoh_refill_barrier",
+     "section": "social",
+     "label": "Medication access barrier",
+     "value": "June insurance plan switch ended mail-order auto-refill of controller inhaler; lapse unresolved at arrival",
+     "source_type": "transcript",
+     "utterance_indices": [
+      11
+     ],
+     "fires_after_utterance": 11,
+     "agent": "scribe",
+     "confidence": 0.76,
+     "requires_verification": false,
+     "nurse_documented": false
+    },
+    {
+     "id": "sdoh_med_rationing",
+     "section": "social",
+     "label": "Possible medication rationing",
+     "value": "Wife believes patient was stretching final fluticasone doses before supply ran out (\"I think she was stretching the last doses\")",
+     "source_type": "transcript",
+     "utterance_indices": [
+      11
+     ],
+     "fires_after_utterance": 11,
+     "agent": "scribe",
+     "confidence": 0.62,
+     "requires_verification": true,
+     "nurse_documented": false
+    },
+    {
+     "id": "sdoh_support_system",
+     "section": "social",
+     "label": "Support system",
+     "value": "Strong — wife at bedside as primary historian, drove patient in, reports proxy paperwork completed",
+     "source_type": "transcript",
+     "utterance_indices": [
+      2,
+      16,
+      20
+     ],
+     "fires_after_utterance": 20,
+     "agent": "scribe",
+     "confidence": 0.85,
+     "requires_verification": false,
+     "nurse_documented": false
+    }
+   ]
+  },
+  "esi": {
+   "level": 2,
+   "label": "Emergent",
+   "rationale": "Decision point A is negative — she is maintaining her airway, breathing spontaneously, and perfusing, so no immediate lifesaving intervention is required — but decision point B is met: this is a high-risk respiratory situation, with SpO2 91% on room air, RR 28, tripod positioning with accessory muscle use, speech limited to short phrases, and four uses of home albuterol without relief. Because level 2 is assigned at decision point B, resource counting (C) is not reached, and her danger-zone vital signs (D: RR 28, HR 108, SpO2 91%) independently reinforce that she cannot wait.",
+   "decision_points": {
+    "a_lifesaving": "No — airway patent, breathing spontaneously, hemodynamically stable; no immediate lifesaving intervention required at triage.",
+    "b_high_risk": "Yes — high-risk respiratory distress: SpO2 91% on room air, RR 28, tripod positioning with accessory neck muscle use, speech in short phrases, refractory to four uses of home albuterol.",
+    "c_resources": "Not reached — level 2 assigned at decision point B; she would clearly consume 2+ resources (nebulizers, corticosteroids, possible labs/imaging) regardless.",
+    "d_vital_signs": "Danger-zone vitals present (RR 28, HR 108, SpO2 91% RA) — would force uptriage consideration from 3 to 2 even if decision point B were equivocal."
+   },
+   "confidence": 0.93,
+   "fires_after_utterance": 28
+  },
+  "routing": {
+   "zone": "Acute respiratory bay",
+   "bed": "Resp Bay 4",
+   "monitoring": "Continuous pulse oximetry from arrival in the bay; titrate oxygen to keep SpO2 92-94%; RN reassessment after each treatment",
+   "resources": [
+    {
+     "name": "Albuterol nebulizer — started per standing asthma protocol",
+     "rationale": "Moderate-to-severe exacerbation refractory to four uses of home albuterol; first-line bronchodilation starts the moment she is on the bed, before physician exam."
+    },
+    {
+     "name": "Continuous pulse oximetry",
+     "rationale": "SpO2 91% on room air with active distress; titrate oxygen to keep SpO2 92-94%."
+    },
+    {
+     "name": "Physician evaluation now",
+     "rationale": "ESI 2 — physician at the bedside within minutes, with the escalation path ready if the first treatment fails."
+    },
+    {
+     "name": "HIV screening — opt-out offer accepted, added to ED labs",
+     "rationale": "Universal opt-out HIV screening is offered to every ED patient; Dana accepted, so the test rides along with labs already being drawn."
+    },
+    {
+     "name": "ED pharmacy / social work medication-access consult",
+     "rationale": "Fluticasone auto-refill broke after the June insurance plan change; resolving the refill and network barrier before disposition is what prevents the next exacerbation."
+    }
+   ],
+   "rationale": "A high-risk asthma exacerbation with hypoxemia (ESI 2) goes directly to the acute respiratory bay — not the waiting room. The RN has already started first-line treatment under the standing asthma protocol and the physician is notified for immediate evaluation, with her wife at the bedside as her support person and stated health care proxy. The controller-refill access failure captured from the conversation is queued for pharmacy and social work so the fix is in motion before disposition.",
+   "fires_after_utterance": 29
+  },
+  "nurse_note": "34F asthmatic, wheeze + dyspnea x6 hr after cat exposure, albuterol x4 without relief, speaking in short phrases.",
+  "physician_note": "**S:**\n- 34-year-old woman with known asthma, here for \"can't get a full breath\" and wheezing since this afternoon; wife Simone at bedside answering most history questions because the patient is too breathless to speak.\n- Onset a little before 4 PM (~6 h before arrival) at a friend's home with two new cats; wife reports she is badly allergic to cats and was already wheezing when they left.\n- Breathing difficulty self-rated 8/10; describes her chest as \"just tight... from the wheezing.\" Albuterol rescue inhaler used four times tonight — \"didn't touch it\"; per wife, one round of albuterol normally resolves her flares, and \"tonight looks worse to me.\"\n- Out of fluticasone controller inhaler ~3 weeks per wife — mail-order refills stopped after a June insurance plan switch; wife thinks she was stretching the last doses to make them last.\n- Pertinent ROS positives: dyspnea, wheeze, chest tightness (which she attributes to the wheezing). Pertinent ROS negatives: denies chest pain, fever, chills, and cough; pain 0/10.\n- Reported history: two prior ED visits for asthma (once in college, once ~4 years ago), both admitted overnight, never intubated (\"never a breathing tube\") per wife; eczema per wife. Allergies: no drug allergies; cats and dust. Home meds per wife: albuterol MDI and fluticasone MDI, nothing else.\n- Wife states she is the patient's health care proxy, paperwork completed last year. Screens as answered: feels safe at home; denies thoughts of self-harm in the past few weeks; accepted the opt-out HIV test.\n\n**O:**\n- 21:52 — HR 108, BP 132/84, RR 28, SpO2 91% RA, T 37.1 °C, pain 0/10; weight 70 kg (chair scale).\n- 22:07 recheck — HR 112, BP 128/82, RR 24, SpO2 94% on neb, T 37.1, pain 0/10.\n- Observed at triage: tripod positioning (leaning forward on arms) with accessory neck muscle use; speech limited to short phrases throughout the encounter; loud bilateral expiratory wheezes audible without a stethoscope.\n- Continuous pulse oximetry placed 21:55; albuterol 2.5 mg nebulizer started 21:56 per standing asthma protocol — on 15-minute recheck SpO2 91% → 94% on neb, RR 28 → 24, HR 108 → 112.",
+  "nurse_orders": [
+   {
+    "id": "no-1",
+    "name": "Albuterol nebulizer",
+    "detail": "Albuterol 2.5 mg nebulized — first treatment started on arrival to Resp Bay 4",
+    "status": "placed",
+    "placed_by": "RN — triage protocol",
+    "time": "2026-07-18T21:56:00-04:00"
+   },
+   {
+    "id": "no-2",
+    "name": "Continuous pulse oximetry",
+    "detail": "Continuous SpO2 monitoring; titrate oxygen to keep SpO2 92-94%",
+    "status": "placed",
+    "placed_by": "RN — triage protocol",
+    "time": "2026-07-18T21:55:00-04:00"
+   }
+  ],
+  "suggested_orders": [
+   {
+    "id": "so-1",
+    "name": "Add ipratropium to nebulizers",
+    "detail": "Ipratropium 0.5 mg with albuterol 2.5 mg nebulized, stacked x3 back-to-back",
+    "rationale": "Adding ipratropium to repeated albuterol reduces admissions in moderate-to-severe exacerbations."
+   },
+   {
+    "id": "so-2",
+    "name": "Prednisone 50 mg PO",
+    "detail": "Prednisone 50 mg PO x1 now (dexamethasone 12 mg PO acceptable alternative)",
+    "rationale": "Early systemic corticosteroid is indicated, especially after a 3-week controller lapse."
+   },
+   {
+    "id": "so-3",
+    "name": "Peak flow before/after treatments",
+    "detail": "Baseline peak expiratory flow now, repeat after each nebulizer; chart % predicted",
+    "rationale": "Measured, numeric response tracking guards against documented under-estimation of asthma severity in Black patients."
+   },
+   {
+    "id": "so-4",
+    "name": "Repeat vitals q15min",
+    "detail": "Full vitals including SpO2 and RR every 15 minutes until sustained improvement",
+    "rationale": "Hypoxemic ESI 2 — timed reassessment catches treatment failure on the clock."
+   },
+   {
+    "id": "so-5",
+    "name": "Portable CXR — conditional",
+    "detail": "Portable chest x-ray only if focal exam findings, fever, or failure to improve",
+    "rationale": "Routine imaging is not indicated in uncomplicated asthma exacerbation."
+   },
+   {
+    "id": "so-6",
+    "name": "Pharmacy / social work consult",
+    "detail": "Medication-access consult to restore fluticasone refill under the new plan's network before disposition",
+    "rationale": "The refill lapse likely drove this visit; fixing it prevents the next one."
+   }
+  ],
+  "template": {
+   "smartphrase": ".TRIAGESOB",
+   "display_name": "Shortness of Breath",
+   "selected_after_utterance": 4,
+   "extra_slots": [
+    {
+     "section": "hpi",
+     "label": "Orthopnea / able to lie flat"
+    },
+    {
+     "section": "history",
+     "label": "Home oxygen use"
+    },
+    {
+     "section": "history",
+     "label": "Peak flow (baseline vs today)"
+    }
+   ]
+  },
+  "vitals_trend": {
+   "rows": [
+    "HR",
+    "BP",
+    "RR",
+    "SpO2",
+    "Temp",
+    "Pain"
+   ],
+   "columns": [
+    {
+     "label": "21:52",
+     "fires_after_utterance": 22,
+     "values": {
+      "HR": "108",
+      "BP": "132/84",
+      "RR": "28",
+      "SpO2": "91% RA",
+      "Temp": "37.1",
+      "Pain": "0/10"
+     }
+    },
+    {
+     "label": "22:07 (recheck)",
+     "fires_after_utterance": 29,
+     "values": {
+      "HR": "112",
+      "BP": "128/82",
+      "RR": "24",
+      "SpO2": "94% on neb",
+      "Temp": "37.1",
+      "Pain": "0/10"
+     }
+    }
+   ]
+  },
+  "sentiment": {
+   "score": 6.4,
+   "scale_note": "1 = highly strained interaction · 10 = exceptionally attuned",
+   "percentile": 47,
+   "reference_n": "241,378 scored ED triage conversations",
+   "analysis": [
+    "Patient's speech arrives in one-to-four-word bursts broken by pauses (\"Can't get... a full breath,\" \"Zero. Just... can't breathe.\") — distress markers are high, but she answers every question put directly to her; affect stays cooperative throughout.",
+    "Nurse is calm and directive, pacing questions to the patient's breathing: items answerable in a word or number (severity, chest pain, pain score, safety screens) go to the patient, while narrative history supplied by the wife is accepted without interruption or judgment (\"Mm-hm,\" \"Okay\").",
+    "Wife volunteers the timeline, trigger, refill lapse, and prior-admission history completely and calmly; the nurse folds it in and closes with direct reassurance to both (\"You're not waiting out here... Simone, you come with her\") — strong team dynamic despite high physiologic distress."
+   ],
+   "calibration_note": "Score recalibrates nightly as newly captured conversations are scored — recent encounters weight the reference distribution, so comparable interactions converge over time."
+  }
+ }
+}
