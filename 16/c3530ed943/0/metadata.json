@@ -1,0 +1,176 @@
+{
+  "cli_version": "0.6.1",
+  "checkpoint_id": "16c3530ed943",
+  "session_id": "4eef2385-6439-4dfc-95c1-05b85efd07c9",
+  "strategy": "manual-commit",
+  "created_at": "2026-07-18T23:20:04.157221Z",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "CLAUDE.md",
+    "app/bun.lock",
+    "app/index.html",
+    "app/package.json",
+    "app/src/App.tsx",
+    "app/src/components/AgentRail.tsx",
+    "app/src/components/MonitorTrace.tsx",
+    "app/src/components/PhysicianView.tsx",
+    "app/src/components/TrackBoard.tsx",
+    "app/src/components/TranscriptPane.tsx",
+    "app/src/components/TriageFormView.tsx",
+    "app/src/components/ui/primitives.tsx",
+    "app/src/data/encounters.ts",
+    "app/src/hooks/useReplay.ts",
+    "app/src/index.css",
+    "app/src/lib/replay.test.ts",
+    "app/src/lib/replay.ts",
+    "app/src/lib/types.ts",
+    "app/src/lib/utils.ts",
+    "app/src/main.tsx",
+    "app/tsconfig.json",
+    "app/vite.config.ts",
+    "data/encounters/abdominal-pain.json",
+    "data/encounters/chest-pain.json",
+    "data/encounters/shortness-of-breath.json",
+    "ed-triage-knowledge.yaml",
+    "synthetic-ambient-fhir-25/README.md",
+    "synthetic-ambient-fhir-25/index.html",
+    "synthetic-ambient-fhir-25/schema.json",
+    "synthetic-ambient-fhir-25/summary.json",
+    "synthetic-ambient-fhir-25/synthetic-ambient-fhir-25.json",
+    "synthetic-ambient-fhir-25/synthetic-ambient-fhir-25.jsonl"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-fable-5",
+  "turn_id": "313665638928",
+  "token_usage": {
+    "input_tokens": 420,
+    "cache_creation_tokens": 723377,
+    "cache_read_tokens": 55471668,
+    "output_tokens": 242304,
+    "api_call_count": 229
+  },
+  "session_metrics": {
+    "turn_count": 12
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-07-18T23:20:04.032572Z",
+    "agent_lines": 81950,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 4485,
+    "human_removed": 1517,
+    "total_committed": 84934,
+    "total_lines_changed": 88127,
+    "agent_percentage": 92.99079737197454,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 3,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 3,
+      "user_lines_removed": 0,
+      "agent_lines_added": 81830,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 3,
+      "user_lines_removed": 0,
+      "agent_lines_added": 81895,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 3,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1524111,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 1063,
+      "user_lines_removed": 1778,
+      "agent_lines_added": 1524533,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3,
+        "app/dist/index.html": 123,
+        "app/src/lib/replay.test.ts": 68,
+        "data/encounters/abdominal-pain.json": 305,
+        "data/encounters/chest-pain.json": 271,
+        "data/encounters/shortness-of-breath.json": 293
+      },
+      "user_removed_per_file": {
+        "app/dist/index.html": 278,
+        "data/encounters/abdominal-pain.json": 522,
+        "data/encounters/chest-pain.json": 492,
+        "data/encounters/shortness-of-breath.json": 486
+      }
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 1143,
+      "user_lines_removed": 1778,
+      "agent_lines_added": 1524587,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3,
+        "app/dist/index.html": 123,
+        "app/src/lib/replay.test.ts": 91,
+        "data/encounters/abdominal-pain.json": 324,
+        "data/encounters/chest-pain.json": 290,
+        "data/encounters/shortness-of-breath.json": 312
+      },
+      "user_removed_per_file": {
+        "app/dist/index.html": 278,
+        "data/encounters/abdominal-pain.json": 522,
+        "data/encounters/chest-pain.json": 492,
+        "data/encounters/shortness-of-breath.json": 486
+      }
+    },
+    {
+      "checkpoint_number": 7,
+      "user_lines_added": 1346,
+      "user_lines_removed": 1779,
+      "agent_lines_added": 1524758,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 3,
+        "app/dist/index.html": 123,
+        "app/src/components/ui/primitives.tsx": 4,
+        "app/src/index.css": 37,
+        "app/src/lib/replay.test.ts": 112,
+        "data/encounters/abdominal-pain.json": 371,
+        "data/encounters/chest-pain.json": 337,
+        "data/encounters/shortness-of-breath.json": 359
+      },
+      "user_removed_per_file": {
+        "app/dist/index.html": 278,
+        "app/src/components/ui/primitives.tsx": 4,
+        "data/encounters/abdominal-pain.json": 521,
+        "data/encounters/chest-pain.json": 491,
+        "data/encounters/shortness-of-breath.json": 485
+      }
+    }
+  ]
+}
